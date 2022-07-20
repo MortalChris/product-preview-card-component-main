@@ -134,6 +134,7 @@ body{
 }
 
 #shop-container button{
+  display: inline-block;
   color: var(--accent-clr);
 }
 
