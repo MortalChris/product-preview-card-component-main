@@ -85,7 +85,6 @@ select {
 body{
     display: grid;
     grid-template-columns: ;
-    grid-template-rows: ;
     grid-template-areas: 
     "aside top"
     "aside heading-container"
@@ -97,37 +96,56 @@ body{
     justify-content: center;
     align-content: center;
     background-color: var(--bg-clr);
+    
 }
 main{
+  border-radius: 0rem 0.625rem 0.625rem 0rem ;
+  margin-right: 0rem;
   padding: 3rem;
-  max-width: 40rem;
-  max-height: 56.3rem;
+  padding-right: 6rem;
+  width: 100%;
+  height: 100%;
+ /* max-width: 28rem;
+  max-height: 56.3rem; */
   background-color: var(--bg-cntr-clr) ;
 }
-/*Header*/
+
+
+/*******Header******/
 #top-container{
   grid-area: top;
+  padding-bottom: 1.2rem;
 }
 #top-container h2{
+  font-family: var(--font-family-primary) ;
+  font-size: var(--secondary-fs) ;
   color: var(--secondary-clr);
+  font-weight: normal;
+  letter-spacing: .5rem;
 }
-/*Svg image*/
+/****** image******/
 #image-container{
   grid-area: aside;
 }
-
-/*Heading*/
+#image-container img{
+  object-fit: scale-down;
+  border-radius: 0.625rem 0rem 0rem 0.625rem;
+  width: 100%;
+  max-height: 39rem;
+}
+/******Heading******/
 #heading-container{
   grid-area: heading-container;
 }
 #heading-container h1{
   color: var(--primary-clr);
   font-family: var(--font-family-secondary);
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: var(--primary-fw);
+  line-height: 3rem;
 }
 
-/*Parapgrah*/
+/******Parapgrah******/
 #paragraph-container{
   grid-area: paragraph-container;
 }
@@ -136,23 +154,35 @@ main{
   font-family: var(--font-family-priamry);
   font-size: var(--secondary-fs);
   font-weight: var( --secondary-fw);
-  font-size:var(--secondary-fs);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  font-size: var(--secondary-fs);
+  padding-top: 1.6rem;
+  line-height: 2.2rem;
 }
 
-/*Shop details*/
+/******Shop details******/
 #shop-container{
     grid-area: shop-container; 
+    list-style: none;
+    align-items: center;
 }
 #shop-container #money-big{
+  display: inline-block;
   color: var(--accent-clr);
+  font-family: var(--font-family-secondary);
+  font-size: 2.5rem;
+  font-weight: var(--primary-fw);
+  margin: 1.2rem;
+  margin-right: .2em;
 }
 #shop-container #money-small{
+  display: inline-block;
   color: var(--secondary-clr);
+  font-family: var(--font-family-priamry);
+  font-size: 1rem;
+  margin: 1.2rem;
 }
 
-/*Button*/
+/******Button******/
 #button-container{
   display:grid;
   justify-content: center;
@@ -165,15 +195,21 @@ main{
   color: var(--bg-cntr-clr);
   background-color: var(--accent-clr);
   padding: 1rem;
-  width: 15rem;
+  width: 19rem;
   border: none;
   border-radius: .4rem;
 }
 #button-container button img{
   display: inline-block;
+  padding-right: .5rem;
 }
 
-/*Footer*/
+#button-container button:hover {
+  background-color: hsl(158, 38%, 20%);
+}
+
+
+/******Footer*****  */
 .attribution { 
   grid-area: attribution;
   font-size: 11px; text-align: center; }
